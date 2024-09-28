@@ -12,41 +12,64 @@
 
 ## Installation
 
-1. Clone the repository:
+Clone the repository:
 
-   ```bash
-   git clone https://github.com/havokzero/SploitusRss.git
-   cd SploitusRss
-pip install -r requirements.txt
 ```bash
+git clone https://github.com/havokzero/SploitusRss.git
+cd SploitusRss
+pip install -r requirements.txt
+```
 
+Configure the `WEBHOOK_URL`:
 
-- **Configure the WEBHOOK_URL:
-Open main.py and replace the WEBHOOK_URL placeholder with your Discord webhook URL:
+Open `main.py` and replace the `WEBHOOK_URL` placeholder with your Discord webhook URL:
 
-
+```python
 WEBHOOK_URL = 'https://discord.com/api/webhooks/your_webhook_url_here'
+```
 
-**Manually fetches the latest exploits from the RSS feed.
-- run
+Run the script:
 
-**Searches for exploits by a specific term, such as "SQL Injection".
-- search <term>
+```bash
+python main.py
+```
 
-**Searches for exploits with a CVE score equal to or greater than the specified value.
-- search-cve <score>
+## Commands
 
-**To Exit
-- exit
+- **Manually fetch the latest exploits from the RSS feed**:
+  ```bash
+  run
+  ```
 
+- **Search for exploits by a specific term, such as "SQL Injection"**:
+  ```bash
+  search <term>
+  ```
+
+- **Search for exploits with a CVE score equal to or greater than the specified value**:
+  ```bash
+  search-cve <score>
+  ```
+
+- **Exit the program**:
+  ```bash
+  exit
+  ```
+
+## Example Usage
 
 ```bash
 [Waiting for input] Type 'run' to fetch exploits now, 'search <term>' to search for a specific exploit, 'search-cve <score>' to search by CVE score, or 'exit' to quit:
+```
+
+### Example Search:
+
 ```bash
-
-**Example Search
 search sql injection
+```
 
-## Contribution 
-**Contributions are welcome! Feel free to fork this repository, create a branch, and submit a pull request with your improvements or fixes.
+The script will then search for exploits related to the term "SQL Injection" and post the results to the Discord webhook.
 
+## Contribution
+
+Contributions are welcome! Feel free to fork this repository, create a branch, and submit a pull request with your improvements or fixes.
